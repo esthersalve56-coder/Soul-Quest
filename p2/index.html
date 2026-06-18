@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soul Quest: Discover Your Character</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="scene">
+    <div class="stars"></div>
+    <div class="sky"></div>
+    <div class="fog"></div>
+  </div>
+
+  <main class="app-shell">
+    <section class="card start-screen active" id="startScreen">
+      <div class="hero-glow"></div>
+      <div class="content">
+        <div class="eyebrow">Soul Quest</div>
+        <h1>Your choices reveal your true character</h1>
+        <p>Embark on a fantasy personality quest. Answer the questions to discover whether you're Angel, Devil, or Pookie.</p>
+        <button class="primary-btn" id="startButton">START</button>
+      </div>
+      <div class="magic-particles"></div>
+    </section>
+
+    <section class="card quiz-screen" id="quizScreen">
+      <div class="quiz-header">
+        <div class="stage-title">Soul Quest</div>
+        <div class="progress-wrapper">
+          <span id="progressText">Question 1 / 18</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+
+      <div class="question-card" id="questionCard">
+        <div class="question-text" id="questionText">Question goes here</div>
+        <div class="answers" id="answersContainer"></div>
+      </div>
+      <div class="sound-hint">Sound effects placeholders are ready.</div>
+    </section>
+
+    <section class="card result-screen" id="resultScreen">
+      <div class="result-header">
+        <div class="result-title" id="resultTitle">Your True Character</div>
+        <div class="result-subtitle" id="resultSubtitle">A destiny shaped by your soul.</div>
+      </div>
+      <div class="result-content" id="resultContent"></div>
+      <div class="stats-panel">
+        <h3>Player Stats</h3>
+        <div class="stat-row"><span>Kindness</span><div class="stat-bar"><div class="stat-fill" id="kindnessBar"></div></div></div>
+        <div class="stat-row"><span>Chaos</span><div class="stat-bar"><div class="stat-fill" id="chaosBar"></div></div></div>
+        <div class="stat-row"><span>Power</span><div class="stat-bar"><div class="stat-fill" id="powerBar"></div></div></div>
+        <div class="stat-row"><span>Friendship</span><div class="stat-bar"><div class="stat-fill" id="friendshipBar"></div></div></div>
+      </div>
+      <button class="primary-btn" id="restartButton">Restart Quest</button>
+    </section>
+  </main>
+
+  <audio id="bgMusic" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
